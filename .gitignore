@@ -1,3 +1,4 @@
+/flashcards/log/*.log
 *.rbc
 *.sassc
 .sass-cache
