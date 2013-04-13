@@ -1944,3 +1944,757 @@ Served asset /jquery_ujs.js - 304 Not Modified (1ms)
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-12 18:19:58 -0700
 Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/decks/1" for 127.0.0.1 at 2013-04-12 20:34:44 -0700
+Connecting to database specified by database.yml
+Processing by DecksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDeck Load (0.1ms)[0m  [1mSELECT "decks".* FROM "decks" WHERE "decks"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mCard Load (0.1ms)[0m  SELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = 1
+  Rendered decks/show.html.erb within layouts/application (30.2ms)
+Completed 200 OK in 87ms (Views: 48.3ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-12 20:34:44 -0700
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-12 20:34:44 -0700
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-12 20:34:44 -0700
+Served asset /application.js - 304 Not Modified (17ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-12 20:34:44 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/decks" for 127.0.0.1 at 2013-04-12 20:34:45 -0700
+Processing by DecksController#index as HTML
+  [1m[36mDeck Load (0.2ms)[0m  [1mSELECT "decks".* FROM "decks" [0m
+  Rendered decks/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 8ms (Views: 6.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-12 20:34:46 -0700
+Served asset /jquery.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-12 20:34:46 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-12 20:34:46 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-12 20:34:46 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/decks/1" for 127.0.0.1 at 2013-04-12 20:34:49 -0700
+Processing by DecksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mDeck Load (0.1ms)[0m  SELECT "decks".* FROM "decks" WHERE "decks"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mCard Load (0.1ms)[0m  [1mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = 1[0m
+  Rendered decks/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 6ms (Views: 4.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-12 20:34:49 -0700
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-12 20:34:49 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-12 20:34:49 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-12 20:34:49 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/decks/1/cards/1" for 127.0.0.1 at 2013-04-12 20:34:51 -0700
+Processing by CardsController#show as HTML
+  Parameters: {"deck_id"=>"1", "id"=>"1"}
+Completed 500 Internal Server Error in 6ms
+
+ActionView::MissingTemplate (Missing template cards/show, application/show with {:locale=>[:en], :formats=>[:html], :handlers=>[:erb, :builder, :coffee]}. Searched in:
+  * "/Users/nano/Developer/Courses/Thoughtbot-Intro-Rails/intro-rails-app/flashcards/app/views"
+):
+  actionpack (3.2.11) lib/action_view/path_set.rb:58:in `find'
+  actionpack (3.2.11) lib/action_view/lookup_context.rb:109:in `find'
+  actionpack (3.2.11) lib/action_view/renderer/abstract_renderer.rb:3:in `find_template'
+  actionpack (3.2.11) lib/action_view/renderer/template_renderer.rb:34:in `determine_template'
+  actionpack (3.2.11) lib/action_view/renderer/template_renderer.rb:10:in `render'
+  actionpack (3.2.11) lib/action_view/renderer/renderer.rb:36:in `render_template'
+  actionpack (3.2.11) lib/action_view/renderer/renderer.rb:17:in `render'
+  actionpack (3.2.11) lib/abstract_controller/rendering.rb:110:in `_render_template'
+  actionpack (3.2.11) lib/action_controller/metal/streaming.rb:225:in `_render_template'
+  actionpack (3.2.11) lib/abstract_controller/rendering.rb:103:in `render_to_body'
+  actionpack (3.2.11) lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+  actionpack (3.2.11) lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+  actionpack (3.2.11) lib/abstract_controller/rendering.rb:88:in `render'
+  actionpack (3.2.11) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (3.2.11) lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+  activesupport (3.2.11) lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+  /Users/nano/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+  activesupport (3.2.11) lib/active_support/core_ext/benchmark.rb:5:in `ms'
+  actionpack (3.2.11) lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+  actionpack (3.2.11) lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+  activerecord (3.2.11) lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+  actionpack (3.2.11) lib/action_controller/metal/instrumentation.rb:39:in `render'
+  actionpack (3.2.11) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (3.2.11) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (3.2.11) lib/abstract_controller/base.rb:167:in `process_action'
+  actionpack (3.2.11) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (3.2.11) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:414:in `_run__1155594313325763706__process_action__740855489491668533__callbacks'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.11) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (3.2.11) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (3.2.11) lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  activesupport (3.2.11) lib/active_support/notifications.rb:123:in `block in instrument'
+  activesupport (3.2.11) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (3.2.11) lib/active_support/notifications.rb:123:in `instrument'
+  actionpack (3.2.11) lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  actionpack (3.2.11) lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+  activerecord (3.2.11) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (3.2.11) lib/abstract_controller/base.rb:121:in `process'
+  actionpack (3.2.11) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.2.11) lib/action_controller/metal.rb:203:in `dispatch'
+  actionpack (3.2.11) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.2.11) lib/action_controller/metal.rb:246:in `block in action'
+  actionpack (3.2.11) lib/action_dispatch/routing/route_set.rb:73:in `call'
+  actionpack (3.2.11) lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  actionpack (3.2.11) lib/action_dispatch/routing/route_set.rb:36:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.11) lib/action_dispatch/routing/route_set.rb:601:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.5) lib/rack/etag.rb:23:in `call'
+  rack (1.4.5) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:210:in `context'
+  rack (1.4.5) lib/rack/session/abstract/id.rb:205:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  activerecord (3.2.11) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.11) lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:405:in `_run__1106493461291747904__call__4071785954848769026__callbacks'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.11) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.11) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.11) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.11) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.11) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.11) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.11) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.11) lib/rails/engine.rb:479:in `call'
+  railties (3.2.11) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.11) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/nano/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/nano/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/nano/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/nano/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.3ms)
+
+
+Started GET "/decks/1/cards/" for 127.0.0.1 at 2013-04-12 20:37:17 -0700
+
+ActionController::RoutingError (No route matches [GET] "/decks/1/cards"):
+  actionpack (3.2.11) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.11) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.11) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.11) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.11) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.11) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.11) lib/rails/engine.rb:479:in `call'
+  railties (3.2.11) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.11) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/nano/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/nano/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/nano/.rvm/rubies/ruby-1.9.3-p392/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/nano/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+
+
+Started GET "/decks/1/cards/1" for 127.0.0.1 at 2013-04-12 20:47:43 -0700
+Connecting to database specified by database.yml
+Processing by CardsController#show as HTML
+  Parameters: {"deck_id"=>"1", "id"=>"1"}
+  [1m[36mDeck Load (0.1ms)[0m  [1mSELECT "decks".* FROM "decks" WHERE "decks"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mCard Load (0.1ms)[0m  SELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = 1 AND "cards"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered cards/show.html.erb within layouts/application (5.5ms)
+Completed 500 Internal Server Error in 73ms
+
+ActionView::Template::Error (undefined method `name' for #<Card:0x007f9c9bc12d68>):
+    1: <%= link_to "Back to the Deck", @deck %>
+    2: 
+    3: <h3><%= @card.name %></h3>
+    4: 
+    5: <% @card.each do |single| %>
+    6:   <div>
+  app/views/cards/show.html.erb:3:in `_app_views_cards_show_html_erb__3355383106043860724_70155313686820'
+
+
+  Rendered /Users/nano/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/nano/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.6ms)
+  Rendered /Users/nano/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.5ms)
+
+
+Started GET "/decks/1/cards/1" for 127.0.0.1 at 2013-04-12 20:49:54 -0700
+Processing by CardsController#show as HTML
+  Parameters: {"deck_id"=>"1", "id"=>"1"}
+  [1m[36mDeck Load (0.1ms)[0m  [1mSELECT "decks".* FROM "decks" WHERE "decks"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mCard Load (0.1ms)[0m  SELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = 1 AND "cards"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered cards/show.html.erb within layouts/application (1.6ms)
+Completed 500 Internal Server Error in 5ms
+
+ActionView::Template::Error (undefined method `name' for #<Card:0x007f9c9d1b9fb8>):
+    1: <%= link_to "Back to the Deck", @deck %>
+    2: 
+    3: <!-- <h3><%= @card.name %></h3> -->
+    4: 
+    5: <% @card.each do |single| %>
+    6:   <div>
+  app/views/cards/show.html.erb:3:in `_app_views_cards_show_html_erb__3355383106043860724_70155313741200'
+
+
+  Rendered /Users/nano/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/nano/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Users/nano/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.1ms)
+
+
+Started GET "/decks/1/cards/1" for 127.0.0.1 at 2013-04-12 20:50:19 -0700
+Processing by CardsController#show as HTML
+  Parameters: {"deck_id"=>"1", "id"=>"1"}
+  [1m[36mDeck Load (0.1ms)[0m  [1mSELECT "decks".* FROM "decks" WHERE "decks"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mCard Load (0.1ms)[0m  SELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = 1 AND "cards"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered cards/show.html.erb within layouts/application (1.6ms)
+Completed 500 Internal Server Error in 4ms
+
+ActionView::Template::Error (undefined method `each' for #<Card:0x007f9c9d3c1360>):
+    2: 
+    3: 
+    4: 
+    5: <% @card.each do |single| %>
+    6:   <div>
+    7:     <%= single.front %>:
+    8:       <li>
+  app/views/cards/show.html.erb:5:in `_app_views_cards_show_html_erb__3355383106043860724_70155314804600'
+
+
+  Rendered /Users/nano/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/nano/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Users/nano/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.0ms)
+
+
+Started GET "/decks/1/cards/1" for 127.0.0.1 at 2013-04-12 20:50:58 -0700
+Processing by CardsController#show as HTML
+  Parameters: {"deck_id"=>"1", "id"=>"1"}
+  [1m[36mDeck Load (0.1ms)[0m  [1mSELECT "decks".* FROM "decks" WHERE "decks"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mCard Load (0.1ms)[0m  SELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = 1 AND "cards"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered cards/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 27ms (Views: 25.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-12 20:50:58 -0700
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-12 20:50:58 -0700
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-12 20:50:58 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-12 20:50:58 -0700
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/decks/1/cards/1" for 127.0.0.1 at 2013-04-12 20:51:27 -0700
+Processing by CardsController#show as HTML
+  Parameters: {"deck_id"=>"1", "id"=>"1"}
+  [1m[36mDeck Load (0.1ms)[0m  [1mSELECT "decks".* FROM "decks" WHERE "decks"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mCard Load (0.1ms)[0m  SELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = 1 AND "cards"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered cards/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 6ms (Views: 4.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-12 20:51:27 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-12 20:51:27 -0700
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-12 20:51:27 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-12 20:51:27 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/decks/1/cards/1" for 127.0.0.1 at 2013-04-12 22:07:31 -0700
+Processing by CardsController#show as HTML
+  Parameters: {"deck_id"=>"1", "id"=>"1"}
+  [1m[36mDeck Load (0.1ms)[0m  [1mSELECT "decks".* FROM "decks" WHERE "decks"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mCard Load (0.1ms)[0m  SELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = 1 AND "cards"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered cards/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-12 22:07:31 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-12 22:07:31 -0700
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-12 22:07:31 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-12 22:07:31 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/decks/1/cards/1" for 127.0.0.1 at 2013-04-12 22:08:01 -0700
+Processing by CardsController#show as HTML
+  Parameters: {"deck_id"=>"1", "id"=>"1"}
+  [1m[36mDeck Load (0.1ms)[0m  [1mSELECT "decks".* FROM "decks" WHERE "decks"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mCard Load (0.1ms)[0m  SELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = 1 AND "cards"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered cards/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 7ms (Views: 4.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-12 22:08:01 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-12 22:08:01 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-12 22:08:01 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-12 22:08:01 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/decks/1/cards/1" for 127.0.0.1 at 2013-04-12 22:08:03 -0700
+Processing by CardsController#show as HTML
+  Parameters: {"deck_id"=>"1", "id"=>"1"}
+  [1m[36mDeck Load (0.1ms)[0m  [1mSELECT "decks".* FROM "decks" WHERE "decks"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mCard Load (0.1ms)[0m  SELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = 1 AND "cards"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered cards/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-12 22:08:03 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-12 22:08:03 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-12 22:08:03 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-12 22:08:03 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/decks/1/cards/1" for 127.0.0.1 at 2013-04-12 22:08:18 -0700
+Processing by CardsController#show as HTML
+  Parameters: {"deck_id"=>"1", "id"=>"1"}
+  [1m[36mDeck Load (0.1ms)[0m  [1mSELECT "decks".* FROM "decks" WHERE "decks"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mCard Load (0.1ms)[0m  SELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = 1 AND "cards"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered cards/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 6ms (Views: 4.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-12 22:08:18 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-12 22:08:18 -0700
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-12 22:08:18 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-12 22:08:18 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/decks/1/cards/1" for 127.0.0.1 at 2013-04-12 22:08:43 -0700
+Processing by CardsController#show as HTML
+  Parameters: {"deck_id"=>"1", "id"=>"1"}
+  [1m[36mDeck Load (0.2ms)[0m  [1mSELECT "decks".* FROM "decks" WHERE "decks"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mCard Load (0.1ms)[0m  SELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = 1 AND "cards"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered cards/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 8ms (Views: 4.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-12 22:08:44 -0700
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-12 22:08:44 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-12 22:08:44 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-12 22:08:44 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/decks/1/cards/1" for 127.0.0.1 at 2013-04-12 22:09:11 -0700
+Processing by CardsController#show as HTML
+  Parameters: {"deck_id"=>"1", "id"=>"1"}
+  [1m[36mDeck Load (0.1ms)[0m  [1mSELECT "decks".* FROM "decks" WHERE "decks"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mCard Load (0.1ms)[0m  SELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = 1 AND "cards"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered cards/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 6ms (Views: 4.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-12 22:09:11 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-12 22:09:11 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-12 22:09:11 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-12 22:09:11 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/decks/1" for 127.0.0.1 at 2013-04-12 22:09:23 -0700
+Processing by DecksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDeck Load (0.1ms)[0m  [1mSELECT "decks".* FROM "decks" WHERE "decks"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mCard Load (0.1ms)[0m  SELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = 1
+  Rendered decks/show.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 21ms (Views: 8.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-12 22:09:23 -0700
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-12 22:09:23 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-12 22:09:23 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-12 22:09:23 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/decks/1/cards/2" for 127.0.0.1 at 2013-04-12 22:09:31 -0700
+Processing by CardsController#show as HTML
+  Parameters: {"deck_id"=>"1", "id"=>"2"}
+  [1m[36mDeck Load (0.1ms)[0m  [1mSELECT "decks".* FROM "decks" WHERE "decks"."id" = ? LIMIT 1[0m  [["id", "2"]]
+Completed 404 Not Found in 1ms
+
+ActiveRecord::RecordNotFound (Couldn't find Deck with id=2):
+  app/controllers/cards_controller.rb:18:in `show'
+
+
+  Rendered /Users/nano/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /Users/nano/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Users/nano/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (6.2ms)
+
+
+Started GET "/decks/1/cards/2" for 127.0.0.1 at 2013-04-12 22:10:19 -0700
+Processing by CardsController#show as HTML
+  Parameters: {"deck_id"=>"1", "id"=>"2"}
+  [1m[35mDeck Load (0.1ms)[0m  SELECT "decks".* FROM "decks" WHERE "decks"."id" = ? LIMIT 1  [["id", "2"]]
+Completed 404 Not Found in 23ms
+
+ActiveRecord::RecordNotFound (Couldn't find Deck with id=2):
+  app/controllers/cards_controller.rb:18:in `show'
+
+
+  Rendered /Users/nano/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/nano/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/nano/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (6.4ms)
+
+
+Started GET "/decks/1/cards/2" for 127.0.0.1 at 2013-04-12 22:10:21 -0700
+Processing by CardsController#show as HTML
+  Parameters: {"deck_id"=>"1", "id"=>"2"}
+  [1m[36mDeck Load (0.1ms)[0m  [1mSELECT "decks".* FROM "decks" WHERE "decks"."id" = ? LIMIT 1[0m  [["id", "2"]]
+Completed 404 Not Found in 1ms
+
+ActiveRecord::RecordNotFound (Couldn't find Deck with id=2):
+  app/controllers/cards_controller.rb:18:in `show'
+
+
+  Rendered /Users/nano/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/nano/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Users/nano/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (6.2ms)
+
+
+Started GET "/decks/1/cards/2" for 127.0.0.1 at 2013-04-12 22:10:28 -0700
+Processing by CardsController#show as HTML
+  Parameters: {"deck_id"=>"1", "id"=>"2"}
+  [1m[35mDeck Load (0.1ms)[0m  SELECT "decks".* FROM "decks" WHERE "decks"."id" = ? LIMIT 1  [["id", "2"]]
+Completed 404 Not Found in 6ms
+
+ActiveRecord::RecordNotFound (Couldn't find Deck with id=2):
+  app/controllers/cards_controller.rb:18:in `show'
+
+
+  Rendered /Users/nano/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+  Rendered /Users/nano/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.6ms)
+  Rendered /Users/nano/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (5.6ms)
+
+
+Started GET "/decks/1/cards/1" for 127.0.0.1 at 2013-04-12 22:10:30 -0700
+Processing by CardsController#show as HTML
+  Parameters: {"deck_id"=>"1", "id"=>"1"}
+  [1m[36mDeck Load (0.1ms)[0m  [1mSELECT "decks".* FROM "decks" WHERE "decks"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mCard Load (0.1ms)[0m  SELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = 1 AND "cards"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered cards/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 15ms (Views: 4.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-12 22:10:31 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-12 22:10:31 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-12 22:10:31 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-12 22:10:31 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/decks/1/cards/2" for 127.0.0.1 at 2013-04-12 22:10:33 -0700
+Processing by CardsController#show as HTML
+  Parameters: {"deck_id"=>"1", "id"=>"2"}
+  [1m[36mDeck Load (0.1ms)[0m  [1mSELECT "decks".* FROM "decks" WHERE "decks"."id" = ? LIMIT 1[0m  [["id", "2"]]
+Completed 404 Not Found in 1ms
+
+ActiveRecord::RecordNotFound (Couldn't find Deck with id=2):
+  app/controllers/cards_controller.rb:18:in `show'
+
+
+  Rendered /Users/nano/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/nano/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Users/nano/.rvm/gems/ruby-1.9.3-p392/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (6.0ms)
+
+
+Started GET "/decks/1/cards/2" for 127.0.0.1 at 2013-04-12 22:11:05 -0700
+Processing by CardsController#show as HTML
+  Parameters: {"deck_id"=>"1", "id"=>"2"}
+  [1m[35mDeck Load (0.1ms)[0m  SELECT "decks".* FROM "decks" WHERE "decks"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mCard Load (0.1ms)[0m  [1mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = 1 AND "cards"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  Rendered cards/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 18ms (Views: 4.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-12 22:11:05 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-12 22:11:05 -0700
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-12 22:11:05 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-12 22:11:05 -0700
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/decks/1/cards/2" for 127.0.0.1 at 2013-04-12 22:13:16 -0700
+Processing by CardsController#show as HTML
+  Parameters: {"deck_id"=>"1", "id"=>"2"}
+  [1m[35mDeck Load (0.1ms)[0m  SELECT "decks".* FROM "decks" WHERE "decks"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mCard Load (0.1ms)[0m  [1mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = 1 AND "cards"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  Rendered cards/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 7ms (Views: 5.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-12 22:13:16 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-12 22:13:16 -0700
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-12 22:13:16 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-12 22:13:16 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/decks/1/cards/2" for 127.0.0.1 at 2013-04-12 22:13:33 -0700
+Processing by CardsController#show as HTML
+  Parameters: {"deck_id"=>"1", "id"=>"2"}
+  [1m[35mDeck Load (0.1ms)[0m  SELECT "decks".* FROM "decks" WHERE "decks"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mCard Load (0.0ms)[0m  [1mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = 1 AND "cards"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  Rendered cards/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-12 22:13:33 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-12 22:13:33 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-12 22:13:33 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-12 22:13:33 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/decks/1/cards/2" for 127.0.0.1 at 2013-04-12 22:13:49 -0700
+Processing by CardsController#show as HTML
+  Parameters: {"deck_id"=>"1", "id"=>"2"}
+  [1m[35mDeck Load (0.1ms)[0m  SELECT "decks".* FROM "decks" WHERE "decks"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mCard Load (0.0ms)[0m  [1mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = 1 AND "cards"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  Rendered cards/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 6ms (Views: 4.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-12 22:13:50 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-12 22:13:50 -0700
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-12 22:13:50 -0700
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-12 22:13:50 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/decks/1/cards/2" for 127.0.0.1 at 2013-04-12 22:14:13 -0700
+Processing by CardsController#show as HTML
+  Parameters: {"deck_id"=>"1", "id"=>"2"}
+  [1m[35mDeck Load (0.1ms)[0m  SELECT "decks".* FROM "decks" WHERE "decks"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mCard Load (0.1ms)[0m  [1mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = 1 AND "cards"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  Rendered cards/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 6ms (Views: 4.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-12 22:14:13 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-12 22:14:13 -0700
+Served asset /jquery.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-12 22:14:13 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-12 22:14:13 -0700
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/decks/1/cards/2" for 127.0.0.1 at 2013-04-12 22:14:39 -0700
+Processing by CardsController#show as HTML
+  Parameters: {"deck_id"=>"1", "id"=>"2"}
+  [1m[35mDeck Load (0.1ms)[0m  SELECT "decks".* FROM "decks" WHERE "decks"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mCard Load (0.1ms)[0m  [1mSELECT "cards".* FROM "cards" WHERE "cards"."deck_id" = 1 AND "cards"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  Rendered cards/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 7ms (Views: 5.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-04-12 22:14:39 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-04-12 22:14:39 -0700
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-04-12 22:14:39 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-04-12 22:14:39 -0700
+Served asset /application.js - 304 Not Modified (0ms)
