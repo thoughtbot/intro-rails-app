@@ -1,9 +1,16 @@
 <%= link_to "Back to the Deck", @deck %>
-<%= link_to "Edit this card", edit_deck_card_path(@card) %>
+<hr />
 
 <div>
+  In <strong><%= @deck.name %></strong>
   <p><%= @card.front %></p>
     means
-  <p><%= @card.back %></p>
-  in <strong><%= @deck.name %></strong>
+  <p><em><%= @card.back %></em></p>
+</div>
+
+<hr />
+
+<div>
+<%= link_to "Edit this card", edit_deck_card_path(@card) %> |
+<%= link_to "Delete", deck_card_path, method: :delete, confirm: "Are you sure?" %>
 </div>
