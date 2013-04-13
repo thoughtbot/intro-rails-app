@@ -18,7 +18,7 @@ class DecksController < ApplicationController
     redirect_to decks_path
   end
 
-  def edit_deck_path
+  def edit
     @deck = Deck.find(params[:id])
   end
 
