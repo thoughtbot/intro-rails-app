@@ -1,19 +1,19 @@
 class CardsController < ApplicationController
 
   def show
-    @deck = Deck.find(params[:deck_id])
+    @deck = find_deck
     @card = @deck.cards.find(params[:id])
     # Could also be written as:
     # @card = Card.find(params[:id])
   end
 
   def new
-    @deck = Deck.find(params[:deck_id])
+    @deck = find_deck
     @card = @deck.cards.new
   end
 
   def create
-    @deck = Deck.find(params[:deck_id])
+    @deck = find_deck
     @card = @deck.cards.new(params[:card])
     @card.save
     redirect_to [@deck, @card]
@@ -34,5 +34,10 @@ class CardsController < ApplicationController
     @card.destroy
     redirect_to deck_path params[:deck_id]
   end
+
+  private
+    def find_deck
+      Deck.find(params[:deck_id])
+    end
 
 end
