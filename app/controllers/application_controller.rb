@@ -8,4 +8,20 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  helper_method :current_user, :signed_in?
+
+  def sign_in user
+    cookies.signed[:user_id] = user.id
+  end
+
+  def authenticate
+    if !signed_in?
+      redirect_to new_session_path
+    end
+  end
+
+  def signed_in?
+    current_user
+  end
+
 end
